@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.7) (preloaded format=xelatex 2023.2.10)  12 FEB 2026 21:44
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.7) (preloaded format=xelatex 2023.2.10)  12 FEB 2026 21:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"./YI LIN_resume.tex"
-(YI LIN_resume.tex
+**./林一_履歷.tex
+(林一_履歷.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-07-04>
 (C:\Users\tana7\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -458,8 +458,8 @@ Package fontspec Info: Font family 'NotoSansCJKTC(0)' created for font 'Noto
 (fontspec)             CJK TC/BI/OT:script=hani;language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-(YI LIN_resume.aux)
-\openout1 = `"YI LIN_resume.aux"'.
+(林一_履歷.aux)
+\openout1 = `林一_履歷.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
@@ -489,9 +489,9 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
 Package hyperref Info: Link coloring OFF on input line 82.
 
-(YI LIN_resume.out) (YI LIN_resume.out)
+(林一_履歷.out) (林一_履歷.out)
 \@outlinefile=\write3
-\openout3 = `"YI LIN_resume.out"'.
+\openout3 = `林一_履歷.out'.
 
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
@@ -593,16 +593,24 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 85.
+(Font)              <10.95> on input line 86.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 85.
+(Font)              <8> on input line 86.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 85.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 85
+(Font)              <6> on input line 86.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 86
 .
 (C:\Users\tana7\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
+
+LaTeX Font Warning: Font shape `TU/NotoSansCJKTC(0)/m/sc' undefined
+(Font)              using `TU/NotoSansCJKTC(0)/m/n' instead on input line 92.
+
+
+LaTeX Font Warning: Font shape `TU/NotoSansCJKTC(0)/m/it' undefined
+(Font)              using `TU/NotoSansCJKTC(0)/m/n' instead on input line 100.
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 4.08003pt, for example:
@@ -610,17 +618,20 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 [1
 
-] (YI LIN_resume.aux)
-Package rerunfilecheck Info: File `"YI LIN_resume".out' has not changed.
-(rerunfilecheck)             Checksum: <no file>.
+] (林一_履歷.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `林一_履歷.out' has not changed.
+(rerunfilecheck)             Checksum: FA51B0F7B3D25B061B7F186AA7A1EF41;987.
  ) 
 Here is how much of TeX's memory you used:
- 15359 strings out of 410654
- 311399 string characters out of 2816299
- 705566 words of memory out of 3000000
- 36242 multiletter control sequences out of 15000+600000
- 473498 words of font info for 76 fonts, out of 8000000 for 9000
+ 15547 strings out of 410654
+ 323280 string characters out of 2816299
+ 722904 words of memory out of 3000000
+ 36424 multiletter control sequences out of 15000+600000
+ 473546 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,11n,85p,436b,386s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,11n,85p,285b,429s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on YI LIN_resume.pdf (1 page).
+Output written on 林一_履歷.pdf (1 page).

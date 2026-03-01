@@ -1,0 +1,197 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Modified for: 林一 (AI Engineer Focus)
+% Traditional Chinese Version
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[xetex]{hyperref}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{fontawesome5} % For GitHub icons
+% 極限邊距設定：上下左右留白縮小，確保內容能塞進一頁且不擁擠
+\usepackage[margin=0.35in]{geometry}
+
+%-------------------------------------------
+% Font Settings
+% 如果在 Overleaf，請使用 XeLaTeX 編譯器
+\setmainfont{Times New Roman}
+\setCJKmainfont{Noto Sans CJK TC} 
+
+%-------------------------------------------
+% Formatting Setup
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% 調整 Section 標題下方的間距
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% 無標題的項目 (用於專案細節)
+\newcommand{\resumeItemNoTitle}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% 調整 Subheading 表格寬度與間距
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+% 聯絡資訊區塊
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://github.com/tana0101}{\Large 林 一}} & Email: \href{mailto:xenone0101@gmail.com}{xenone0101@gmail.com}\\
+  \href{https://github.com/tana0101}{https://github.com/tana0101} & Mobile: (+886) 9-7132-9517 \\
+\end{tabular*}
+
+%-----------SUMMARY-----------------
+\section{個人簡介 (Summary)}
+目前就讀於成大資工所碩士，專注於電腦視覺與深度學習。具備將軟體工程原則導入 AI 開發的實務經驗，曾獲 \textbf{2025 台積電 IT CareerHack 冠軍}，並以\textbf{第一作者}於 \textbf{IEEE ICMAIL 2023} 發表論文。
+
+%-----------EDUCATION-----------------
+\section{教育背景 (Education)}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {國立成功大學 (NCKU)}{台南，台灣}
+      {資訊工程學系 碩士班}{2024 年 9 月 - 預計 2026 年 7 月}
+      \resumeItemListStart
+        \resumeItem{碩士論文}
+          {基於深度學習之小兒髖關節 X 光分析系統}
+        \resumeItem{相關修課}
+          {深度學習、電腦視覺、影像處理}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {國立臺灣海洋大學 (NTOU)}{基隆，台灣}
+      {資訊工程學系 學士班 (GPA: 3.77/4.0)}{2020 年 9 月 - 2024 年 6 月}
+  \resumeSubHeadingListEnd
+
+%-----------SELECTED PROJECTS-----------------
+\section{精選專案 (Selected Projects)}
+  \resumeSubHeadingListStart
+
+    % Project 1: Master Thesis (SOTA & Clinical Impact focus)
+      \resumeSubheading
+      {基於深度學習之小兒髖關節 X 光分析系統 | 關鍵點偵測}{碩士論文}
+      {PyTorch, YOLO, ConvNeXt, SimCC, Medical Imaging}{\href{https://github.com/tana0101/Hip-Joint-Keypoint-Detection}{\faGithub \textbf{ GitHub 程式碼}}}
+      \resumeItemListStart
+        \resumeItemNoTitle
+          {\textbf{建構}髖關節發育不良 (DDH) 的診斷流程，採用\textbf{二階段由上而下 (top-down)}的關鍵點回歸方法；整合 \textbf{YOLO} 進行 ROI 定位，並採用 \textbf{ConvNeXt 結合 SimCC} 實現次像素級的關鍵點回歸。}
+        \resumeItemNoTitle
+          {在 MTDDH 資料集達成 \textbf{SOTA} 表現，將 \textbf{YOLOv11-seg}（F1: 0.593）提升 \textbf{59\% 至 0.943}，以提高臨床的診斷準確率。}
+        \resumeItemNoTitle
+          {經臨床驗證，系統誤差低於資深醫師 (\textbf{平均誤差：5.01px vs. 6.34px})，顯示其在\textbf{自動化診斷}上的精準度與臨床實用價值。}
+        \resumeItemNoTitle
+          {設計可擴充的\textbf{模組化架構}，支援多種 backbone（HRNet、EfficientNet）與 head 設計，用於髖臼指數（AI）角度量測與 IHDI 分類。}
+      \resumeItemListEnd
+
+    % Project 2: TSMC Hackathon (First Place focus)
+    \resumeSubheading
+      {企業溝通無國界翻譯系統 (2025 台積電 IT CareerHack)}{第一名 (冠軍)}
+      {JavaScript, String Matching Algorithm, Frontend Development}{\href{https://github.com/daidaiclub/Careerhack-2025-RealTime-Translate-System}{\faGithub \textbf{ GitHub 程式碼}}}
+      \resumeItemListStart
+        \resumeItemNoTitle
+          {開發企業用即時翻譯工具，可\textbf{自動標示}特定領域的關鍵術語；前端採用 \textbf{HTML/CSS/JS} 製作，並榮獲\textbf{冠軍}。}
+        \resumeItemNoTitle
+          {設計並實作\textbf{術語比對演算法}，將翻譯內容中的技術名詞\textbf{自動對應與註記}，提升閱讀清楚度與資訊一致性。}
+        \resumeItemNoTitle
+          {向台積電主管進行成果展示與簡報，展現良好的技術溝通與表達能力。}
+      \resumeItemListEnd
+
+    % 3. Undergraduate Research (NTOU)
+    \resumeSubheading
+      {基於深度學習之水下影像還原系統}{大學專題研究}
+      {PyTorch, GAN, Image Enhancement}
+      {
+        \href{https://github.com/NTOU-Arrays-Start-at-One/Give-ocean-a-piece-of-your-mind}{\faGithub \textbf{ 程式碼}} 
+        \quad % 加一點間距
+        \href{https://doi.org/10.1109/ICMAIL59311.2023.10347502}{\faFilePdf \textbf{ 論文}}
+      }
+      \resumeItemListStart
+        \resumeItemNoTitle
+          {以\textbf{第一作者}身份於 \textbf{IEEE ICMAIL 2023} 發表研討會論文。}
+        \resumeItemNoTitle
+          {整合 \textbf{WaterNet（CNN 水下顏色恢復模型）}與 \textbf{GAN} 上色模型，建立水下影像色彩還原系統以改善紅光衰減造成的色偏；並使用色板分析與 \textbf{K-means + CIEDE2000} 進行量化評估，驗證色彩還原效果。}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{實務經驗 (Experience)}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Programing.tw}{台灣}
+      {共同創辦人暨產品負責人}{2021 年 2 月 - 至今}
+      \resumeItemListStart
+        \resumeItem{全端開發}
+          {使用 \textbf{Go (Gin)} 與 \textbf{Vue.js} 建構「Proglearn」平台，並實作 \textbf{WebSocket} 用於即時遠端教學。}
+        \resumeItem{獲獎肯定}
+          {憑藉創新概念於潮創客創業大賽獲得\textbf{優選獎（前四名）}，並在 2023 資訊智慧創新跨域專題競賽中獲得\textbf{特優獎}。}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{專業技能 (Technical Skills)}
+ \resumeSubHeadingListStart
+    \resumeItem{AI 與電腦視覺}
+      {PyTorch, OpenCV, YOLO, ConvNeXt, Data Augmentation, GANs}
+    \resumeItem{程式語言}
+      {Python, C/C++, Java, Go, JavaScript, SQL}
+    \resumeItem{網頁與工具}
+      {Vue.js, Gin (Go), Docker, Git, Linux (Ubuntu), LaTeX, CI/CD}
+ \resumeSubHeadingListEnd
+
+%-----------AWARDS-----------------
+\section{榮譽與獎項 (Honors \& Awards)}
+  \resumeSubHeadingListStart
+    \resumeItem{程式競賽}
+      {2022 ICPC Asia Taiwan Online Programming Contest - 佳作 (前 35\%)}
+  \resumeSubHeadingListEnd
+
+\end{document}

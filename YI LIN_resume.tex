@@ -1,7 +1,8 @@
 %-------------------------
 % Resume in Latex
 % Author : Sourabh Bajaj
-% License : MIT
+% Modified for: Yi Lin (AI Engineer Focus)
+% English Version
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -17,19 +18,23 @@
 \usepackage[xetex]{hyperref}
 \usepackage{fontspec}
 \usepackage{xeCJK}
+\usepackage{fontawesome5} % For GitHub icons
+% Tight margins for a one-page layout
+\usepackage[margin=0.35in]{geometry}
 
+%-------------------------------------------
+% Font Settings
+% Use XeLaTeX on Overleaf
+\setmainfont{Times New Roman}
+\setCJKmainfont{Noto Sans CJK TC}
+
+%-------------------------------------------
+% Formatting Setup
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -37,14 +42,10 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Section title spacing
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-8pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% 中文字體
-\setmainfont{Times New Roman}
-\setCJKmainfont{Noto Sans CJK TC}
 
 %-------------------------
 % Custom commands
@@ -54,6 +55,14 @@
   }
 }
 
+% Bullet item without a title (for project details)
+\newcommand{\resumeItemNoTitle}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% Subheading layout
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -62,160 +71,126 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-% Conference Publications
-\newcommand{\resumeConferenceHeading}[1]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} \\
-    \end{tabular*}\vspace{-5pt}
-}
-\newcommand{\ConferenceItem}[1]{
-  \item\small{
-    #1 \vspace{-2pt}
-  }
-}
-
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{document}
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://tana.programing.tw/}{\Large YI LIN}} & Email : \href{mailto:xenone0101@gmail.com}{xenone0101@gmail.com}\\
-  \href{https://tana.programing.tw/}{{https://tana.programing.tw/}} & Mobile : 886-9-7132-9517 \\
+  \textbf{\href{https://github.com/tana0101}{\Large YI LIN}} & Email: \href{mailto:xenone0101@gmail.com}{xenone0101@gmail.com}\\
+  \href{https://github.com/tana0101}{https://github.com/tana0101} & Mobile: (+886) 9-7132-9517 \\
 \end{tabular*}
 
 %-----------SUMMARY-----------------
 \section{Summary}
-  \resumeSubHeadingListStart
-    \item{
-      {Undergraduate student with a strong interest in \textbf{AI}, \textbf{software development}, and \textbf{entrepreneurship.}}
-    }
-    \item{
-      {\textbf{CEO} and \textbf{programmer} at \textbf{programing.tw}, a startup that develops programming tools and provides programming education.}
-    }
-  \resumeSubHeadingListEnd
-
+M.S. student in Computer Science at National Cheng Kung University, focusing on \textbf{Computer Vision} and \textbf{Deep Learning}. Experienced in applying \textbf{software engineering} principles to build modular and reusable AI systems. \textbf{First Place (Champion)} in the \textbf{2025 TSMC IT CareerHack}; published a \textbf{first-author} paper at \textbf{IEEE ICMAIL 2023}.
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {National Cheng Kung University, Tainan}{Tainan, Taiwan}
-      {Department of Computer Science and Information Engineering}{Sep 2024 - Expected July 2026  }
+      {National Cheng Kung University (NCKU)}{Tainan, Taiwan}
+      {M.S. in Computer Science and Information Engineering}{Sep 2024 -- Expected Jul 2026}
+      \resumeItemListStart
+        \resumeItem{Thesis}
+          {Deep Learning-Based Pediatric Hip X-ray Analysis System}
+        \resumeItem{Relevant Coursework}
+          {Deep Learning, Computer Vision, Image Processing}
+      \resumeItemListEnd
+
     \resumeSubheading
-      {National Taiwan Ocean University, Keelung}{Keelung, Taiwan}
-      {Department of Computer Science and Engineering (GPA: 3.77/4.0)}{Sep  2020 - June 2024}
+      {National Taiwan Ocean University (NTOU)}{Keelung, Taiwan}
+      {B.S. in Computer Science and Engineering (GPA: 3.77/4.0)}{Sep 2020 -- Jun 2024}
   \resumeSubHeadingListEnd
 
+%-----------SELECTED PROJECTS-----------------
+\section{Selected Projects}
+  \resumeSubHeadingListStart
+
+    % Project 1: Master's Thesis
+    \resumeSubheading
+      {Deep Learning-Based Pediatric Hip X-ray Analysis System | Keypoint Detection}{Master's Thesis}
+      {PyTorch, YOLO, ConvNeXt, SimCC, Medical Imaging}{\href{https://github.com/tana0101/Hip-Joint-Keypoint-Detection}{\faGithub \textbf{ GitHub Code}}}
+      \resumeItemListStart
+        \resumeItemNoTitle
+          {Built an end-to-end diagnostic pipeline for developmental dysplasia of the hip (DDH) using a \textbf{two-stage top-down} keypoint regression approach: \textbf{YOLO} for ROI localization and \textbf{ConvNeXt + SimCC} for sub-pixel keypoint regression.}
+        \resumeItemNoTitle
+          {Achieved \textbf{state-of-the-art} performance on the MTDDH dataset, improving over \textbf{YOLOv11-seg} from F1 0.593 to \textbf{0.943} (\textbf{+59\%}).}
+        \resumeItemNoTitle
+          {Validated on clinical data with lower error than a senior physician (\textbf{Mean Error: 5.01px vs. 6.34px}), demonstrating practical value for \textbf{automated/assisted diagnosis}.}
+        \resumeItemNoTitle
+          {Designed a scalable \textbf{modular framework} supporting multiple backbones (HRNet, EfficientNet) and head variants for acetabular index (AI) angle measurement and IHDI classification.}
+      \resumeItemListEnd
+
+    % Project 2: TSMC Hackathon
+    \resumeSubheading
+      {AI Domain-based Translation System (2025 TSMC IT CareerHack)}{First Place (Champion)}
+      {JavaScript, String Matching, Frontend Development}{\href{https://github.com/daidaiclub/Careerhack-2025-RealTime-Translate-System}{\faGithub \textbf{ GitHub Code}}}
+      \resumeItemListStart
+        \resumeItemNoTitle
+          {Developed a real-time translation tool for enterprise communication with automatic \textbf{domain-term highlighting}; built the frontend with \textbf{HTML/CSS/JavaScript}, winning \textbf{First Place}.}
+        \resumeItemNoTitle
+          {Implemented a custom \textbf{terminology matching} algorithm to auto-map and annotate technical terms in translations, improving readability and consistency.}
+        \resumeItemNoTitle
+          {Presented the winning product to TSMC executives, demonstrating strong technical communication and presentation skills.}
+      \resumeItemListEnd
+
+    % Project 3: Undergraduate Research
+    \resumeSubheading
+      {Deep Learning-Based Underwater Image Color Restoration System}{Undergraduate Research}
+      {PyTorch, GAN, Image Enhancement}
+      {
+        \href{https://github.com/NTOU-Arrays-Start-at-One/Give-ocean-a-piece-of-your-mind}{\faGithub \textbf{ Code}}
+        \quad
+        \href{https://doi.org/10.1109/ICMAIL59311.2023.10347502}{\faFilePdf \textbf{ Paper}}
+      }
+      \resumeItemListStart
+        \resumeItemNoTitle
+          {Published a conference paper as \textbf{First Author} at \textbf{IEEE ICMAIL 2023}.}
+        \resumeItemNoTitle
+          {Combined \textbf{WaterNet} (CNN-based underwater color restoration) with a \textbf{GAN}-based colorization model to mitigate red-light attenuation and color shift; evaluated results via palette analysis and quantitative metrics (\textbf{K-means + CIEDE2000}).}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
 
-  \resumeSubheading
-    {NTOU}{Keelung, Taiwan}
-    {Teaching Assistant}{Feb 2022 - Dec 2022} %sep 2022
-    \resumeItemListStart
-      \resumeItem{Physics}
-            {Assisted in university-level physics with supplementary courses, explaining concepts.}
-      % \resumeItem{Computer Science}
-      %       {Tutored students in computer science to deepen their understanding of key concepts.}
-    \resumeItemListEnd
-  
-  \resumeSubheading
-    {\href{https://programing.tw/}{programing.tw}}{Taiwan}
-    {CEO and Programmer}{Feb 2021 - Present}
-    \resumeItemListStart
-      \resumeItem{Business and Entrepreneurship}
-            {Represented the team at meetings, conferences, and competitions. Acted as \textbf{spokesperson} and \textbf{representative}.}
-      \resumeItem{Proglearn}
-            {Helped plan and develop programming tools with \textbf{Gin} and \textbf{Vue}. Added interactive teaching and voice features using \textbf{WebSocket}.}
-      \resumeItem{Awards}
-            {Won \textbf{first prize} in Taiwan's "潮創客" (Chao Chuang Ke) Startup Competition and reached finals in other major competitions. Earned \textbf{High Distinction} in "資訊智慧創新跨域專題競賽" (Information Intelligence Innovation Cross-Domain Project Competition).}
-    \resumeItemListEnd
-
-
-    
-
-  \resumeSubHeadingListEnd
-
-
-%-----------Research Publications-----------------
-\section{Research Publications}
-
-  \resumeSubHeadingListStart
-  
-    \resumeConferenceHeading
-    {Conference Proceedings}
-    \resumeItemListStart
-      \ConferenceItem{\textbf{Yi Lin}, Chung-Wei Hung, Yu-Jie Wang, Chih-Chia Liao, and Yu-Shiuan Tsai. \textbf{Enhancing underwater images: Automatic colorization using deep learning and image enhancement techniques}. In \textit{2023 IEEE International Conference on Marine Artificial Intelligence and Law (ICMAIL)}, pages 48–53, 2023. \hfill DOI: \href{https://doi.org/10.1109/ICMAIL59311.2023.10347502}{10.1109/ICMAIL59311.2023.10347502}}
-    \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-
-%-----------Research Publications-----------------
-\section{Award}
-
-  \resumeSubHeadingListStart
-  
-    \resumeConferenceHeading
-    {Programming}
-    \resumeItemListStart
-      \ConferenceItem{2022 ICPC Asia Taiwan Online Programming Contest - Honorable Mention (76/216)}
-    \resumeItemListEnd
-
-    \resumeConferenceHeading{Entrepreneurship}
-    \resumeItemListStart
-      \ConferenceItem{2024 NTUE 校園創業競賽 - Potential Award}
-      \ConferenceItem{2021 潮創客創業大賽 - First Prize}
-    \resumeItemListEnd
-
-    \resumeConferenceHeading{Academic and Project Competitions}
-    \resumeItemListStart
-      \ConferenceItem{2025 TSMC IT CareerHack - First Place}
-      \ConferenceItem{2023 Intelligence Innovation And Interdisciplinary Creation Contest - Honorable Mention}
-      \ConferenceItem{2023 IEEE International Conference on Marine Artificial Intelligence and Law (ICMAIL) - Acceptance / Recommended for submission to the SCI journal}
-      \ConferenceItem{2023 資訊智慧創新跨域專題競賽 - High Distinction Award}
+    \resumeSubheading
+      {Programing.tw}{Taiwan}
+      {Co-Founder \& Product Lead}{Feb 2021 -- Present}
+      \resumeItemListStart
+        \resumeItem{Full-Stack Development}
+          {Built the ``Proglearn'' platform using \textbf{Go (Gin)} and \textbf{Vue.js}; implemented \textbf{WebSocket}-based real-time remote teaching.}
+        \resumeItem{Awards}
+          {Received \textbf{Top Award (Top 4)} at the Chao Chuang Ke Startup Competition, and \textbf{High Distinction} at the 2023 Information Intelligence Innovation Cross-Domain Project Competition.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------------
-% \section{Projects}
-%   \resumeSubHeadingListStart
-%     \resumeSubItem{Classification of Trash Based On Recyclability Status (Jan, 2017 – Apr, 2017)}
-%       {Developed a project (achieving 88\% accuracy), whose objective was to take images of a single piece of garbage and classify it into five classes- glass, leather, paper, plastic and metal using Computer Vision(CV) approach and Machine Learning, using Python. Used SIFT for feature extraction, K-means clustering for grouping and SVM for classification)}
-%     \resumeSubItem{Student and Teacher Attendance Manager}
-%       {Developed an android app for taking attendance of both students (by teachers) and teachers (By Admins). Used JAVA and XML with SQLite as database.}
-%   \resumeSubHeadingListEnd
-
-%--------PROGRAMMING SKILLS------------
-\section{Skills}
+%-----------SKILLS-----------------
+\section{Technical Skills}
  \resumeSubHeadingListStart
-    \item{
-      \textbf{Technical Expertise}{: \textbf{AI}, \textbf{Computer Vision}, Software Development, Web Development.}
-    }
-    \item{
-     \textbf{Proficient}{: \textbf{C/C++}, Python}
-    }
-    \item{
-     \textbf{Comfortable}{: JAVA, HTML, CSS, JavaScript, Vue.js, Gin, PHP, Git, LaTeX}
-    }
+    \resumeItem{AI \& Computer Vision}
+      {PyTorch, OpenCV, YOLO, ConvNeXt, Data Augmentation, GANs}
+    \resumeItem{Languages}
+      {Python, C/C++, Java, Go, JavaScript, SQL}
+    \resumeItem{Web \& Tools}
+      {Vue.js, Gin (Go), Docker, Git, Linux (Ubuntu), LaTeX, CI/CD}
  \resumeSubHeadingListEnd
 
+%-----------HONORS-----------------
+\section{Honors \& Awards}
+  \resumeSubHeadingListStart
+    \resumeItem{Programming}
+      {2022 ICPC Asia Taiwan Online Programming Contest -- Honorable Mention (Top 35\%)}
+  \resumeSubHeadingListEnd
 
-%-------------------------------------------
 \end{document}
