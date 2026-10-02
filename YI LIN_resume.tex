@@ -89,108 +89,147 @@
 
 %-----------SUMMARY-----------------
 \section{Summary}
-M.S. student in Computer Science at National Cheng Kung University, focusing on \textbf{Computer Vision} and \textbf{Deep Learning}. Experienced in applying \textbf{software engineering} principles to build modular and reusable AI systems. \textbf{First Place (Champion)} in the \textbf{2025 TSMC IT CareerHack}; published a \textbf{first-author} paper at \textbf{IEEE ICMAIL 2023}.
+M.S. in Computer Science from National Cheng Kung University with experience in computer vision,
+deep learning, AI backend development, Docker deployment, and Linux/GPU infrastructure.
+Deployed a DDH AI system at \textbf{National Cheng Kung University Hospital},
+won \textbf{1st Place at the 2025 TSMC IT CareerHack}, and published at IEEE ICMAIL 2023 as \textbf{first author}.
 
 %-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {National Cheng Kung University (NCKU)}{Tainan, Taiwan}
-      {M.S. in Computer Science and Information Engineering}{Sep 2024 -- Expected Jul 2026}
-      \resumeItemListStart
-        \resumeItem{Thesis}
-          {Deep Learning-Based Pediatric Hip X-ray Analysis System}
-        \resumeItem{Relevant Coursework}
-          {Deep Learning, Computer Vision, Image Processing}
-      \resumeItemListEnd
 
-    \resumeSubheading
-      {National Taiwan Ocean University (NTOU)}{Keelung, Taiwan}
-      {B.S. in Computer Science and Engineering (GPA: 3.77/4.0)}{Sep 2020 -- Jun 2024}
-  \resumeSubHeadingListEnd
+\section{Education}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {National Cheng Kung University (NCKU)}
+    {Tainan, Taiwan}
+    {M.S. in Computer Science and Information Engineering, GPA: 4.16/4.3}
+    {Sep. 2024 -- Jul. 2026}
+
+  \resumeItemListStart
+    \resumeItem{Thesis}
+      {Deep Learning-Based Landmark Detection for Automatic Pediatric Hip X-ray Analysis}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {National Taiwan Ocean University (NTOU)}
+    {Keelung, Taiwan}
+    {B.S. in Computer Science and Engineering, GPA: 3.8/4.0}
+    {Sep. 2020 -- Jun. 2024}
+
+\resumeSubHeadingListEnd
 
 %-----------SELECTED PROJECTS-----------------
+
 \section{Selected Projects}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
-    % Project 1: Master's Thesis
-    \resumeSubheading
-      {Deep Learning-Based Pediatric Hip X-ray Analysis System | Keypoint Detection}{Master's Thesis}
-      {PyTorch, YOLO, ConvNeXt, SimCC, Medical Imaging}{\href{https://github.com/tana0101/Hip-Joint-Keypoint-Detection}{\faGithub \textbf{ GitHub Code}}}
-      \resumeItemListStart
-        \resumeItemNoTitle
-          {Built an end-to-end diagnostic pipeline for developmental dysplasia of the hip (DDH) using a \textbf{two-stage top-down} keypoint regression approach: \textbf{YOLO} for ROI localization and \textbf{ConvNeXt + SimCC} for sub-pixel keypoint regression.}
-        \resumeItemNoTitle
-          {Achieved \textbf{state-of-the-art} performance on the MTDDH dataset, improving over \textbf{YOLOv11-seg} from F1 0.593 to \textbf{0.943} (\textbf{+59\%}).}
-        \resumeItemNoTitle
-          {Validated on clinical data with lower error than a senior physician (\textbf{Mean Error: 5.01px vs. 6.34px}), demonstrating practical value for \textbf{automated/assisted diagnosis}.}
-        \resumeItemNoTitle
-          {Designed a scalable \textbf{modular framework} supporting multiple backbones (HRNet, EfficientNet) and head variants for acetabular index (AI) angle measurement and IHDI classification.}
-      \resumeItemListEnd
+% DDH
+\resumeSubheading
+  {Pediatric Hip Dysplasia AI Analysis System | NCKUH Deployment}
+  {Master's Research}
+  {PyTorch, YOLO, ConvNeXt, SimCC, FastAPI, Docker, SFTP}
+  {\href{https://github.com/tana0101/Hip-Joint-Keypoint-Detection}
+  {\faGithub\ \textbf{GitHub}}}
 
-    % Project 2: TSMC Hackathon
-    \resumeSubheading
-      {AI Domain-based Translation System (2025 TSMC IT CareerHack)}{First Place (Champion)}
-      {JavaScript, String Matching, Frontend Development}{\href{https://github.com/daidaiclub/Careerhack-2025-RealTime-Translate-System}{\faGithub \textbf{ GitHub Code}}}
-      \resumeItemListStart
-        \resumeItemNoTitle
-          {Developed a real-time translation tool for enterprise communication with automatic \textbf{domain-term highlighting}; built the frontend with \textbf{HTML/CSS/JavaScript}, winning \textbf{First Place}.}
-        \resumeItemNoTitle
-          {Implemented a custom \textbf{terminology matching} algorithm to auto-map and annotate technical terms in translations, improving readability and consistency.}
-        \resumeItemNoTitle
-          {Presented the winning product to TSMC executives, demonstrating strong technical communication and presentation skills.}
-      \resumeItemListEnd
+\resumeItemListStart
+  \resumeItem{Clinical Deployment}
+    {Developed and deployed an automated DDH analysis system at
+    \textbf{National Cheng Kung University Hospital}, covering the deep learning model,
+    GPU inference backend, Docker deployment, and SFTP-based image exchange.}
 
-    % Project 3: Undergraduate Research
-    \resumeSubheading
-      {Deep Learning-Based Underwater Image Color Restoration System}{Undergraduate Research}
-      {PyTorch, GAN, Image Enhancement}
-      {
-        \href{https://github.com/NTOU-Arrays-Start-at-One/Give-ocean-a-piece-of-your-mind}{\faGithub \textbf{ Code}}
-        \quad
-        \href{https://doi.org/10.1109/ICMAIL59311.2023.10347502}{\faFilePdf \textbf{ Paper}}
-      }
-      \resumeItemListStart
-        \resumeItemNoTitle
-          {Published a conference paper as \textbf{First Author} at \textbf{IEEE ICMAIL 2023}.}
-        \resumeItemNoTitle
-          {Combined \textbf{WaterNet} (CNN-based underwater color restoration) with a \textbf{GAN}-based colorization model to mitigate red-light attenuation and color shift; evaluated results via palette analysis and quantitative metrics (\textbf{K-means + CIEDE2000}).}
-      \resumeItemListEnd
+  \resumeItem{Model \& Results}
+    {Built a two-stage YOLO + ConvNeXt/FPN/SimCC landmark pipeline for automatic ACI and IHDI analysis;
+    achieved \textbf{94.8\% IHDI accuracy and 0.906 QWK} on MTDDH 5-fold cross-validation.}
+\resumeItemListEnd
 
-  \resumeSubHeadingListEnd
 
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
+% TSMC CareerHack
+\resumeSubheading
+  {Real-Time Enterprise Meeting Translation \& Intelligent Q\&A System}
+  {2025 TSMC IT CareerHack -- 1st Place}
+  {LLM, RAG, VAD, Flask, Socket.IO, Docker, JavaScript}
+  {\href{https://github.com/daidaiclub/Careerhack-2025-RealTime-Translate-System}
+  {\faGithub\ \textbf{GitHub}}}
 
-    \resumeSubheading
-      {Programing.tw}{Taiwan}
-      {Co-Founder \& Product Lead}{Feb 2021 -- Present}
-      \resumeItemListStart
-        \resumeItem{Full-Stack Development}
-          {Built the ``Proglearn'' platform using \textbf{Go (Gin)} and \textbf{Vue.js}; implemented \textbf{WebSocket}-based real-time remote teaching.}
-        \resumeItem{Awards}
-          {Received \textbf{Top Award (Top 4)} at the Chao Chuang Ke Startup Competition, and \textbf{High Distinction} at the 2023 Information Intelligence Innovation Cross-Domain Project Competition.}
-      \resumeItemListEnd
+\resumeItemListStart
+  \resumeItem{Real-Time Translation}
+    {Converted meeting speech into multilingual transcripts using VAD-based segmentation,
+    with fuzzy matching to identify and correct domain-specific terminology.}
 
-  \resumeSubHeadingListEnd
+  \resumeItem{Meeting Q\&A}
+    {Used LLMs and RAG to search historical meetings by expressions such as
+    ``yesterday,'' ``last week,'' or specific dates, supporting cross-meeting Q\&A and summarization.}
+\resumeItemListEnd
+
+
+% Undergraduate Research
+\resumeSubheading
+  {Deep Learning-Based Underwater Image Restoration}
+  {Undergraduate Research}
+  {PyTorch, GAN, Image Enhancement}
+  {
+    \href{https://github.com/NTOU-Arrays-Start-at-One/Give-ocean-a-piece-of-your-mind}
+    {\faGithub\ \textbf{Code}}
+    \quad
+    \href{https://doi.org/10.1109/ICMAIL59311.2023.10347502}
+    {\faFilePdf\ \textbf{Paper}}
+  }
+
+\resumeItemListStart
+  \resumeItemNoTitle
+    {Published as \textbf{first author} at IEEE ICMAIL 2023;
+    developed a WaterNet + GAN-based restoration pipeline with quantitative
+    color evaluation using K-means and CIEDE2000.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL EXPERIENCE-----------------
+
+\section{Technical Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {NCKU VisionLab | AI Infrastructure \& Server Administration}
+  {Taiwan}
+  {Linux, CUDA, NVIDIA GPU, Docker, NAS, LDAP/SSSD, Flask, Socket.IO}
+  {Jul. 2025 -- Jun. 2026}
+
+\resumeItemListStart
+  \resumeItem{Infrastructure}
+    {Managed \textbf{10 Linux servers, 12 NVIDIA GPUs, and NAS storage}
+    for approximately 20 lab members; provisioned GPU servers and maintained
+    CUDA, Docker, SSH, LDAP/SSSD, user access, TLS, and CA certificates.}
+
+  \resumeItem{Server-Monitor}
+    {Developed a centralized CPU/GPU/server monitoring system for shared computing resources,
+    used by \textbf{approximately 20 lab members for one year}.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 %-----------SKILLS-----------------
-\section{Technical Skills}
- \resumeSubHeadingListStart
-    \resumeItem{AI \& Computer Vision}
-      {PyTorch, OpenCV, YOLO, ConvNeXt, Data Augmentation, GANs}
-    \resumeItem{Languages}
-      {Python, C/C++, Java, Go, JavaScript, SQL}
-    \resumeItem{Web \& Tools}
-      {Vue.js, Gin (Go), Docker, Git, Linux (Ubuntu), LaTeX, CI/CD}
- \resumeSubHeadingListEnd
 
-%-----------HONORS-----------------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+  \resumeItem{AI / ML}
+    {PyTorch, YOLO, ConvNeXt, SimCC, OpenCV, LLM, RAG}
+  \resumeItem{Backend / Infrastructure}
+    {FastAPI, Flask, REST API, Docker, Docker Compose, SFTP, Socket.IO, Linux, CUDA, LDAP/SSSD, NAS}
+  \resumeItem{Programming}
+    {Python, C/C++, JavaScript, Java, SQL}
+\resumeSubHeadingListEnd
+
+%-----------AWARDS-----------------
+
 \section{Honors \& Awards}
-  \resumeSubHeadingListStart
-    \resumeItem{Programming}
-      {2022 ICPC Asia Taiwan Online Programming Contest -- Honorable Mention (Top 35\%)}
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+  \resumeItemNoTitle
+    {2022 ICPC Asia Taiwan Online Programming Contest --
+    \textbf{Honorable Mention (Top 35\%)}}
+  \resumeItemNoTitle
+    {2023 Information Intelligence Innovation Interdisciplinary Project Competition --
+    \textbf{High Distinction}}
+\resumeSubHeadingListEnd
 
 \end{document}

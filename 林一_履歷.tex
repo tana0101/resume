@@ -90,108 +90,154 @@
 
 %-----------SUMMARY-----------------
 \section{個人簡介 (Summary)}
-目前就讀於成大資工所碩士，專注於電腦視覺與深度學習。具備將軟體工程原則導入 AI 開發的實務經驗，曾獲 \textbf{2025 台積電 IT CareerHack 冠軍}，並以\textbf{第一作者}於 \textbf{IEEE ICMAIL 2023} 發表論文。
+國立成功大學資訊工程碩士，專注於電腦視覺、深度學習與 AI 系統開發，具備模型研發、FastAPI GPU 推論服務、Docker 部署與 Linux/GPU Server 維運經驗。碩士研究之 DDH AI 分析系統已部署於\textbf{成大醫院}；曾獲\textbf{ 2025 台積電 IT CareerHack 冠軍}，並以\textbf{第一作者}於 \textbf{IEEE ICMAIL 2023} 發表論文。
 
 %-----------EDUCATION-----------------
 \section{教育背景 (Education)}
   \resumeSubHeadingListStart
     \resumeSubheading
       {國立成功大學 (NCKU)}{台南，台灣}
-      {資訊工程學系 碩士班}{2024 年 9 月 - 預計 2026 年 7 月}
+      {資訊工程學系 碩士班 (GPA: 4.16/4.3)}{2024 年 9 月 - 2026 年 7 月}
       \resumeItemListStart
         \resumeItem{碩士論文}
-          {基於深度學習之小兒髖關節 X 光分析系統}
-        \resumeItem{相關修課}
-          {深度學習、電腦視覺、影像處理}
+          {應用深度學習關鍵點偵測技術於小兒髖關節 X 光影像之發育不良檢測}
       \resumeItemListEnd
       
     \resumeSubheading
       {國立臺灣海洋大學 (NTOU)}{基隆，台灣}
-      {資訊工程學系 學士班 (GPA: 3.77/4.0)}{2020 年 9 月 - 2024 年 6 月}
+      {資訊工程學系 學士班 (GPA: 3.8/4.0)}{2020 年 9 月 - 2024 年 6 月}
   \resumeSubHeadingListEnd
 
 %-----------SELECTED PROJECTS-----------------
+%-----------SELECTED PROJECTS-----------------
 \section{精選專案 (Selected Projects)}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
-    % Project 1: Master Thesis (SOTA & Clinical Impact focus)
-      \resumeSubheading
-      {基於深度學習之小兒髖關節 X 光分析系統 | 關鍵點偵測}{碩士論文}
-      {PyTorch, YOLO, ConvNeXt, SimCC, Medical Imaging}{\href{https://github.com/tana0101/Hip-Joint-Keypoint-Detection}{\faGithub \textbf{ GitHub 程式碼}}}
-      \resumeItemListStart
-        \resumeItemNoTitle
-          {\textbf{建構}髖關節發育不良 (DDH) 的診斷流程，採用\textbf{二階段由上而下 (top-down)}的關鍵點回歸方法；整合 \textbf{YOLO} 進行 ROI 定位，並採用 \textbf{ConvNeXt 結合 SimCC} 實現次像素級的關鍵點回歸。}
-        \resumeItemNoTitle
-          {在 MTDDH 資料集達成 \textbf{SOTA} 表現，將 \textbf{YOLOv11-seg}（F1: 0.593）提升 \textbf{59\% 至 0.943}，以提高臨床的診斷準確率。}
-        \resumeItemNoTitle
-          {經臨床驗證，系統誤差低於資深醫師 (\textbf{平均誤差：5.01px vs. 6.34px})，顯示其在\textbf{自動化診斷}上的精準度與臨床實用價值。}
-        \resumeItemNoTitle
-          {設計可擴充的\textbf{模組化架構}，支援多種 backbone（HRNet、EfficientNet）與 head 設計，用於髖臼指數（AI）角度量測與 IHDI 分類。}
-      \resumeItemListEnd
+% Project 1: DDH Medical AI
+\resumeSubheading
+  {小兒髖關節發育不良 AI 分析系統 | 成大醫院部署}
+  {碩士研究}
+  {PyTorch, YOLO, ConvNeXt, SimCC, FastAPI, Docker, SFTP}
+  {\href{https://github.com/tana0101/Hip-Joint-Keypoint-Detection}
+  {\faGithub\ \textbf{GitHub 程式碼}}}
 
-    % Project 2: TSMC Hackathon (First Place focus)
-    \resumeSubheading
-      {企業溝通無國界翻譯系統 (2025 台積電 IT CareerHack)}{第一名 (冠軍)}
-      {JavaScript, String Matching Algorithm, Frontend Development}{\href{https://github.com/daidaiclub/Careerhack-2025-RealTime-Translate-System}{\faGithub \textbf{ GitHub 程式碼}}}
-      \resumeItemListStart
-        \resumeItemNoTitle
-          {開發企業用即時翻譯工具，可\textbf{自動標示}特定領域的關鍵術語；前端採用 \textbf{HTML/CSS/JS} 製作，並榮獲\textbf{冠軍}。}
-        \resumeItemNoTitle
-          {設計並實作\textbf{術語比對演算法}，將翻譯內容中的技術名詞\textbf{自動對應與註記}，提升閱讀清楚度與資訊一致性。}
-        \resumeItemNoTitle
-          {向台積電主管進行成果展示與簡報，展現良好的技術溝通與表達能力。}
-      \resumeItemListEnd
+\resumeItemListStart
+  \resumeItem{醫院部署}
+    {研發小兒髖關節發育不良（DDH）自動分析系統，
+    並部署於\textbf{成大醫院}，負責深度學習模型、
+    GPU 推論後端與院端影像交換流程之端到端開發。}
 
-    % 3. Undergraduate Research (NTOU)
-    \resumeSubheading
-      {基於深度學習之水下影像還原系統}{大學專題研究}
-      {PyTorch, GAN, Image Enhancement}
-      {
-        \href{https://github.com/NTOU-Arrays-Start-at-One/Give-ocean-a-piece-of-your-mind}{\faGithub \textbf{ 程式碼}} 
-        \quad % 加一點間距
-        \href{https://doi.org/10.1109/ICMAIL59311.2023.10347502}{\faFilePdf \textbf{ 論文}}
-      }
-      \resumeItemListStart
-        \resumeItemNoTitle
-          {以\textbf{第一作者}身份於 \textbf{IEEE ICMAIL 2023} 發表研討會論文。}
-        \resumeItemNoTitle
-          {整合 \textbf{WaterNet（CNN 水下顏色恢復模型）}與 \textbf{GAN} 上色模型，建立水下影像色彩還原系統以改善紅光衰減造成的色偏；並使用色板分析與 \textbf{K-means + CIEDE2000} 進行量化評估，驗證色彩還原效果。}
-      \resumeItemListEnd
+  \resumeItem{AI 推論服務}
+    {使用 FastAPI + PyTorch 建構 GPU 推論服務，
+    以 Docker 容器化部署，並透過 SFTP
+    與院端系統交換影像及分析結果。}
 
-  \resumeSubHeadingListEnd
+    \resumeItem{模型與成果}
+    {建構二階段 Top-down 關鍵點定位模型，以 YOLO 定位 ROI，
+    結合 ConvNeXt、FPN 與 SimCC 預測解剖關鍵點並自動計算
+    ACI 與 IHDI；MTDDH 5-fold CV 達
+    \textbf{IHDI Accuracy 94.8\%、QWK 0.906}。}
+\resumeItemListEnd
 
-%-----------EXPERIENCE-----------------
-\section{實務經驗 (Experience)}
-  \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Programing.tw}{台灣}
-      {共同創辦人暨產品負責人}{2021 年 2 月 - 至今}
-      \resumeItemListStart
-        \resumeItem{全端開發}
-          {使用 \textbf{Go (Gin)} 與 \textbf{Vue.js} 建構「Proglearn」平台，並實作 \textbf{WebSocket} 用於即時遠端教學。}
-        \resumeItem{獲獎肯定}
-          {憑藉創新概念於潮創客創業大賽獲得\textbf{優選獎（前四名）}，並在 2023 資訊智慧創新跨域專題競賽中獲得\textbf{特優獎}。}
-      \resumeItemListEnd
+% Project 2: TSMC CareerHack
+\resumeSubheading
+  {企業溝通無國界翻譯系統 | 2025 台積電 IT CareerHack}
+  {第一名（冠軍）}
+  {LLM, RAG, VAD, Flask, Socket.IO, Docker, JavaScript}
+  {\href{https://github.com/daidaiclub/Careerhack-2025-RealTime-Translate-System}
+  {\faGithub\ \textbf{GitHub 程式碼}}}
 
-  \resumeSubHeadingListEnd
+\resumeItemListStart
+  \resumeItem{企業會議即時翻譯}
+    {將會議語音即時轉換為文字並提供多語言翻譯，
+    結合 VAD 語音斷句與模糊比對，自動辨識、校正並標示企業專有名詞。}
 
+  \resumeItem{智慧會議問答}
+    {使用 LLM 與 RAG 整理及檢索歷史會議內容，
+    支援以「昨天」、「上週」或指定日期等\textbf{自然語言時間條件}進行跨會議查詢，
+    並提供自動摘要與重點整理。}
+\resumeItemListEnd
+
+
+% Project 3: Undergraduate Research
+\resumeSubheading
+  {基於深度學習之水下影像還原系統}
+  {大學專題研究}
+  {PyTorch, GAN, Image Enhancement}
+  {
+    \href{https://github.com/NTOU-Arrays-Start-at-One/Give-ocean-a-piece-of-your-mind}
+    {\faGithub\ \textbf{程式碼}}
+    \quad
+    \href{https://doi.org/10.1109/ICMAIL59311.2023.10347502}
+    {\faFilePdf\ \textbf{論文}}
+  }
+
+\resumeItemListStart
+  \resumeItemNoTitle
+    {以\textbf{第一作者}於 \textbf{IEEE ICMAIL 2023} 發表論文；
+    整合 WaterNet 與 GAN 建構水下影像色彩還原系統，
+    並以 K-means + CIEDE2000 量化評估色彩還原效果。}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL EXPERIENCE-----------------
+\section{實務與技術經驗 (Technical Experience)}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {NCKU VisionLab | AI 基礎設施與伺服器管理}
+  {台灣}
+  {Linux, CUDA, NVIDIA GPU, Docker, NAS, LDAP/SSSD, Flask, Socket.IO}
+  {2025 年 7 月 - 2026 年 6 月}
+
+\resumeItemListStart
+  \resumeItemNoTitle
+    {\textbf{AI 運算環境維運：}
+    管理實驗室 \textbf{10 台 Linux Server、12 張 NVIDIA GPU 與 NAS}，
+    負責 GPU/CUDA、Docker、共用軟體及使用者存取環境，
+    支援約 20 位研究成員進行模型訓練與實驗。}
+
+  \resumeItemNoTitle
+    {\textbf{GPU Server 建置：}
+    負責新伺服器建置與上線，涵蓋 OS、固定 IP、SSH、
+    GPU/CUDA、Docker、LDAP/SSSD、使用者權限，
+    並處理 TLS、CA 憑證與登入異常等系統問題。}
+
+  \resumeItemNoTitle
+    {\textbf{Server-Monitor：}
+    因應多人共用 GPU 資源之監控需求，自主開發多伺服器監控系統，
+    集中查看 CPU、Memory、Disk、GPU、Process 與使用者狀態，
+    已於實驗室實際運行約\textbf{1 年，供約 20 位成員使用}。}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
 %-----------SKILLS-----------------
 \section{專業技能 (Technical Skills)}
- \resumeSubHeadingListStart
-    \resumeItem{AI 與電腦視覺}
-      {PyTorch, OpenCV, YOLO, ConvNeXt, Data Augmentation, GANs}
-    \resumeItem{程式語言}
-      {Python, C/C++, Java, Go, JavaScript, SQL}
-    \resumeItem{網頁與工具}
-      {Vue.js, Gin (Go), Docker, Git, Linux (Ubuntu), LaTeX, CI/CD}
- \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+  \resumeItem{AI / Machine Learning}
+    {PyTorch, YOLO, ConvNeXt, SimCC, OpenCV, LLM, RAG}
+  \resumeItem{Backend / Deployment}
+    {FastAPI, Flask, REST API, Docker, Docker Compose, SFTP, Socket.IO}
+  \resumeItem{Infrastructure}
+    {Linux, CUDA, NVIDIA GPU, SSH, LDAP/SSSD, NAS}
+  \resumeItem{Programming}
+    {Python, C/C++, JavaScript, Java, SQL}
+\resumeSubHeadingListEnd
 
 %-----------AWARDS-----------------
 \section{榮譽與獎項 (Honors \& Awards)}
   \resumeSubHeadingListStart
-    \resumeItem{程式競賽}
-      {2022 ICPC Asia Taiwan Online Programming Contest - 佳作 (前 35\%)}
+    \resumeItem{資訊獎項}
+    {2022 ICPC Asia Taiwan Online Programming Contest \textbf{佳作（前 35\%）}｜2023 資訊智慧創新跨域專題競賽 \textbf{特優獎}}
+    % \resumeItem{程式競賽}
+    %   {2022 ICPC Asia Taiwan Online Programming Contest - \textbf{佳作 (前 35\%)}}
+    % \resumeItem{專題競賽}
+    %   {2023 資訊智慧創新跨域專題競賽 - \textbf{特優獎}}
+    % % \resumeItem{創業競賽}
+    % %   {2021 潮創客創業大賽 - \textbf{優選獎（前四名）}}
   \resumeSubHeadingListEnd
 
 \end{document}
